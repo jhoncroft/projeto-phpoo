@@ -8,6 +8,7 @@ use App\Classes\Parameters;
 $template = new Template;
 $twig = $template->init();
 
+$twig->addFunction($site_url);
 
 //Chamando o controller digitado na Url
 $callController = new \App\Controllers\Controller;

@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ titulo }}</title>
-</head>
-<body>
-    {% block site_content %} {% endblock %}
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+        <title>{{ titulo }}</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/table.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/button.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/form.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+        <script type="text/javascript" src="../assets/js/boxOver.js"></script>
+    </head>
+    <body>
+        <div id="main_cotainer">
+            <div class="top_bar">
+                <!--include do top-->
+                <div id="main_content">
+                    <div id="menu_tab">
+                        <!--include do menu-->
+                    </div>
+                    <div class="crumb_navigation">
+                        <!--breadcrumb-->
+                    </div>
+                    <div class="left_content">
+                        <div class="title_box">Categorias</div>
+                        <ul class="left_menu"> 
+                            <!--include do left menu-->                      
+                        </ul>
+                        <div class="title_box">Promoção</div>
+                        <div class="border_box">
+                            <div class="product_title"><!--nome produto promoção--></div>
+                            <div class="product_image"><!--imagem produto promoção--></div>
+                            <div class="prod_price">
+                                <!--prço do produto-->
+                            </div>
+                        </div>
+                        <div class="title_box">Newslestter</div>
+                        <div class="border_box">
+                            <input type="text" name="newslestter" class="newsletter" value="Seu email">
+                            <a href="" class="join">Cadastrar email</a>
+                            <div class="banner_adds">
+                                <a href="">
+                                    <!--banner de promoção-->
+                                </a>
+                            </div>
+                        </div>
+                        <div class="center_content">
+                            {% block content %} {% endblock %}
+                        </div>
+                        <div class="right_content">
+                            <div class="shopping_cart">
+                                <div class="cart_title">Carrinho de compras</div>
+                                <div class="cart_details">
+                                    <span id="pruducts_cart"><!--numero de produtos no carrinho--></span> <br>
+                                    <span class="border_cart"></span>Total: 
+                                    <span class="price"><!--total de compras carrinho--></span>
+                                </div>
+                                <div class="cart_icon">
+                                    <a href="#" title="header=[Checkout] body=[&nbsp;] fade=[on]"></a>
+                                    <img src="" alt=""> <!--icone do carrinho -->
+                                </div>
+                                <div class="title_boc">Novidades</div>
+                                <div class="border_box">
+                                    <div class="product_title"> <!-- titulo produto  novidade--></div>
+                                    <div class="product_image"><!-- Imagem do produto que é novidade--></div>
+                                    <div class="prod_price">
+                                        <div class="price"><!--Preço do produto que é noviidade--></div>
+                                    </div>    
+                                </div>
+                                <div class="title_box">Marcas</div>
+                                    <!-- Include das Marcas -->
+                                <div class="banner_ads">
+                                 <!-- banner de propaganda-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="left_footer">
+                        <!--imagem footer-->
+                    </div>
+                    <div class="center_footer">
+                        Loja virtual, todos os direitos reservados {{ 'now' | date('d/m/y')}} <br>
+                        <!-- Imagem da loja -->
+                    </div>
+                    <div class="right_footer">
+                        <!--imagem footer-->
+                        <a href="#">home</a> <a href="#">about</a> <a href="#">sitemap</a> 
+                        <a href="#">rss</a> <a href="contact.html">contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="{{ site_url() }}/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/js/site/custom/carrinho.js"></script>
+        <script type="text/javascript" src="/assets/js/site/custom/frete.js"></script>
+        <script type="text/javascript" src="/assets/js/site/custom/avaliacoes.js"></script>
+        <script type="text/javascript" src="/bower_components/numeral/numeral.js"></script>
+        <script type="text/javascript" src="/bower_components/numeral/languages/pt-br.js"></script>
+        <script type="text/javascript" src="/assets/js/site/custom/language.js"></script>
+        <script type="text/javascript" src="/assets/js/site/custom/functions.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    </body>
 </html>
+<!--{% block site_content %} {% endblock %}-->
+<!-- -->
